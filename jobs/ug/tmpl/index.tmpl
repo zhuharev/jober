@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Гнездосеть</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+  /*background: linear-gradient(to right, #00E39F, #00C4E1);*/
+  color: #069;
+
+
+  color: #fff;
+background: linear-gradient(90deg, #23A6D5, #23D5AB);
+background-size: 400% 400%;
+-webkit-animation: Gradient 135s ease infinite;
+-moz-animation: Gradient 135s ease infinite;
+animation: Gradient 135s ease infinite;
+}
+.button-socicon [class^="socicon-"], .button-socicon [class*=" socicon-"] {
+	vertical-align: middle;
+	margin-right: 0.3em;
+}
+
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+body {
+margin: 0;
+font-size: 2em;
+}
+
+.fbox {
+  display: flex;
+  flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+flex-grow:1;
+}
+
+.item {
+  flex: auto;
+  background: rgba(238, 238, 238, 0.45);
+  padding: 40px 100px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+h2  {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #069;
+}
+
+
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+</style>
+</head>
+<body>
+  <video id="bgvid" playsinline autoplay muted loop>
+    <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+  <source src="chern.mp4" type="video/mp4">
+  </video>
+
+  <div class="fbox">
+    <div class="box">
+      <h2>СПБ</h2>
+      <div class="item button-socicon">
+        <span class="socicon-vkontakte"></span>&nbsp;{{ index .socs 2}}
+        <div><a href="https://vk.com/yuytnoe_gnezdishko">@yuytnoe_gnezdishko</a></div>
+      </div>
+      <div class="item button-socicon">
+        <span class="socicon-telegram"></span>&nbsp;{{ index .socs 5}}
+        <div><a href="https://t.me/ughome">@ughome</a></div>
+      </div>
+      <div class="item button-socicon">
+        <span class="socicon-instagram"></span>&nbsp;{{ index .socs 0}}
+        <div><a href="https://www.instagram.com/uytnoe_gnezdo">@uytnoe_gnezdo</a></div>
+      </div>
+      <div class="item button-socicon">
+        <span class="socicon-telegram"></span>&nbsp;{{ index .socs 4}}
+        <div><a href="https://t.me/joinchat/Bh88AEH7ALRcN2F45Vj1hA">чат</a></div>
+      </div>
+    </div>
+    <div class="box">
+      <h2>МСК</h2>
+      <div class="item button-socicon">
+        <span class="socicon-vkontakte"></span>&nbsp;{{ index .socs 3}}
+        <div><a href="https://vk.com/yuytnoe_gnezdishko_msk">@yuytnoe_gnezdishko_msk</a></div>
+      </div>
+      <div class="item button-socicon">
+        <span class="socicon-telegram"></span>&nbsp;{{ index .socs 6}}
+        <div><a href="https://t.me/ugnezdishko">@ugnezdishko</a></div>
+      </div>
+      <div class="item button-socicon">
+        <span class="socicon-instagram"></span>&nbsp;{{ index .socs 1}}
+        <div><a href="https://www.instagram.com/uytnoe_gnezdo_msk/">@uytnoe_gnezdo_msk/</a></div>
+      </div>
+      <div class="item button-socicon">
+        <span class="socicon-telegram"></span>&nbsp;{{ index .socs 7}}
+        <div><a href="https://t.me/joinchat/Ceq48UOOssFD38nlnl7tXQ ">чат</a></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

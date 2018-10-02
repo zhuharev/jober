@@ -1,0 +1,3 @@
+make all:
+	go-bindata -pkg ug -prefix tmpl -o tmpl.go tmpl/...
+
